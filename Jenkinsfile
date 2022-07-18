@@ -23,13 +23,13 @@ pipeline {
         stage('Deploy')
          {
             steps {
-                                echo 'Deploying....'
+                   bat "ls -a"
             }
         }
     }
         post {
             always {
-            echo 'I will always say Hello again!'
+            junit '**/target/*.xml'
         }
         success {
             echo 'I will say Hello only if job is success'
