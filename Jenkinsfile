@@ -17,14 +17,10 @@ pipeline {
         stage('Deploy')
          {
             steps {
-                when {
-                    anyOf {
-                            
-                        }
-                    }
-                echo 'Deploying....'
+                                echo 'Deploying....'
             }
         }
+    }
         post {
             always {
             echo 'I will always say Hello again!'
@@ -35,6 +31,6 @@ pipeline {
         failure {
             echo 'I will say Hello only if job is failure'
         }
-        }
+        
     }
 }
