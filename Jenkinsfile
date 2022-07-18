@@ -1,6 +1,9 @@
 // Declarative //
 pipeline {
   agent any
+  environment {
+        NAME = 'Kushagra'
+    }
   triggers {
         pollSCM('* * * * *')
     }
@@ -14,7 +17,7 @@ pipeline {
         stage('Test') 
         {
             steps {
-                echo 'Testing..'
+              echo 'Testing..${NAME}'
             }
         }
         stage('Deploy')
