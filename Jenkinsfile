@@ -16,6 +16,7 @@ pipeline {
         }
         stage('Deploy')
          {
+           anyOf{}
             steps {
                                 echo 'Deploying....'
             }
