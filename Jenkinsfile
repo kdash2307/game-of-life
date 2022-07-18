@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy')
          {
             steps {
-                   bat "ls -a"
+                  bat "ls -al"
             }
         }
     }
@@ -36,6 +36,7 @@ pipeline {
         }
         failure {
             echo 'I will say Hello only if job is failure'
+             mail to: kushagra2307@gmail.com, subject: 'The Pipeline failed :('
         }
         
     }
