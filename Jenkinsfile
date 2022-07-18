@@ -35,7 +35,6 @@ pipeline {
             echo 'I will say Hello only if job is success'
         }
         failure {
-            echo 'I will say Hello only if job is failure'
              mail to: kushagra2307@gmail.com, subject: 'The Pipeline failed :('
         }
         
